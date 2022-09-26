@@ -1,14 +1,11 @@
 package sample.scenes;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import sample.constants.SolverTest;
 import sample.utils.Board;
@@ -89,7 +86,6 @@ public class Solver implements display {
                 }
             }
             Board solution = v.solve(partial);
-            ;
             for (int r = 0; r < 9; r++) {
                 for (int c = 0; c < 9; c++) {
                     if (textFields[c][r].getText().trim().equals("")) {
@@ -106,6 +102,9 @@ public class Solver implements display {
                 }
             }
         });
+
+
+
         // Event Handle for Clear Button
         clearBtn.setOnAction(event -> {
             for (int row = 0; row < 9; row++) {
@@ -116,20 +115,14 @@ public class Solver implements display {
             }//end of loop row
             //test();
         });
+
+
+
         //exit back to home scene
         exitBtn.setOnAction(event -> {
             stage.setScene(new Home(stage).show());
         });
 
-    }
-
-    private void line() {
-        Line line = new Line();
-        line.setStartX(2000);
-        line.setStartY(200);
-        line.setEndX(2000);
-        line.setEndY(500);
-//        grid.getChildren().add(line);
     }
 
 

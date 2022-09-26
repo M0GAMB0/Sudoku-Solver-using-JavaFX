@@ -3,8 +3,8 @@ package sample.constants;
 import javafx.scene.control.TextField;
 
 public class SolverTest {
-    TextField textFields[][]=new TextField[9][9];
-    public SolverTest(TextField textField[][]){
+    TextField[][] textFields=new TextField[9][9];
+    public SolverTest(TextField[][] textField){
         this.textFields=textField;
     }
     public void test1() {
