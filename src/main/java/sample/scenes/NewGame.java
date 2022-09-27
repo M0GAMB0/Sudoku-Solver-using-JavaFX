@@ -76,6 +76,10 @@ public class NewGame implements display {
             if(flag){
                 return;
             }
+            if(v.completeAndValid(partial)){
+                stage.setScene(new Success(stage).show());
+            }
+
 
         });
 

@@ -6,6 +6,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import sample.scenes.Home;
 import sample.scenes.Solver;
+import sample.scenes.Success;
 
 public class HelloApplication extends Application {
 
@@ -30,7 +31,7 @@ public class HelloApplication extends Application {
 
             //OverAll
             Image icon = new Image("file:src/main/java/Images/logo_512.png");
-            primaryStage.setScene(homeScene);
+            primaryStage.setScene(new Home(primaryStage).show());
             primaryStage.setResizable(false);
             primaryStage.setTitle("Sudoku Solver");
             primaryStage.getIcons().add(icon);
