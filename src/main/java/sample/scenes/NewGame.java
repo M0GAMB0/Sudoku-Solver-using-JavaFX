@@ -52,7 +52,8 @@ public class NewGame implements display {
         grid.add(hbBox2, 12, 3, 3, 3);
         grid.add(hbBox3, 12, 6, 3, 3);
 
-        new SolverTest(textField).test1();
+        //new SolverTest(textField).test1();
+        func.test(textField);
         return scene;
     }
     public void handleEvents(){
@@ -82,7 +83,9 @@ public class NewGame implements display {
 
 
         });
-
+        change.setOnAction(event -> {
+            new Functionalities().test(textField);
+        });
 
         exit.setOnAction(event -> {
             stage.setScene(new Home(stage).show());

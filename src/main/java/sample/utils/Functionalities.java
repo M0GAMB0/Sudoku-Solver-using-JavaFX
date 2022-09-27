@@ -8,6 +8,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
+import sample.constants.SolverTest;
+
+import java.util.Random;
 
 public class Functionalities {
     private String s = "-fx-font-size:21;" + "-fx-border-color:white;" + "-fx-border-width:3;" + "-fx-text-fill:white;" + "-fx-font-weight:bolder;";
@@ -53,5 +56,31 @@ public class Functionalities {
         btn.setCursor(Cursor.HAND);
         btn.setFont(Font.font("Cooper", 16));
         btn.setTextAlignment(TextAlignment.CENTER);
+    }
+
+    public void test(TextField[][] textfields) {
+        Random random = new Random();
+        int x = random.nextInt(3);
+        for (int r = 0; r < 9; r++) {
+            for (int c = 0; c < 9; c++) {
+                textfields[c][r].setText("");
+                textfields[c][r].setEditable(true);
+            }
+        }
+        SolverTest test = new SolverTest(textfields);
+        switch (x) {
+            case 0:
+                test.test1();
+                break;
+            case 1:
+                test.test2();
+                break;
+            case 2:
+                test.test3();
+                break;
+            default:
+                break;
+            //case 3: test.test3();
+        }
     }
 }
