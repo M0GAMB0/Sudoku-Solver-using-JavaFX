@@ -10,4 +10,4 @@
 <h3 align="center">Sudoku Solver's Solver Page Before Solving</h3>
 <p align="center"><img src="https://i.pinimg.com/564x/5a/ba/f3/5abaf383579c5d04a6878026924f10b3.jpg" alt="Sudoku Solver's Solver Page Before Solving"></p>
 <h3 align="center">Sudoku Solver's Solver Page After getting solved</h3>
-<p align="center"><img src="https://i.pinimg.com/564x/8b/9a/c1/8b9ac1a7e695cc28b6c8b35240b4e3db.jpg" alt="Sudoku Solver's Solver Page After getting solved"></p>
+<p align="center"><img src="https://i.pinimg.com/564x/9e/03/fa/9e03fa45e72c45cdb042f8563ce8bf78.jpg" alt="Sudoku Solver's Solver Page After getting solved"></p>
