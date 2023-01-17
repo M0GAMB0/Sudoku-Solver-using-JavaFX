@@ -110,6 +110,7 @@ public class Solver implements display {
             for (int row = 0; row < 9; row++) {
                 for (int col = 0; col < 9; col++) {
                     textFields[col][row].setText("");
+                    textFields[col][row].setEditable(true);
                     textFields[col][row].setStyle(s + "-fx-background-color:transparent;");
                 }//end of loop Col
             }//end of loop row

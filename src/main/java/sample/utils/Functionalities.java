@@ -13,7 +13,8 @@ import sample.constants.SolverTest;
 import java.util.Random;
 
 public class Functionalities {
-    private String s = "-fx-font-size:21;" + "-fx-border-color:white;" + "-fx-border-width:3;" + "-fx-text-fill:white;" + "-fx-font-weight:bolder;";
+    private String s = "-fx-font-size:21;"  + "-fx-border-width:3;" + "-fx-text-fill:white;" +
+            "-fx-border-style:solid;" + "-fx-font-weight:bolder;";
 
     private static final String IDLE_BUTTON_STYLE = "-fx-font-size:32;-fx-border-width:3;-fx-border-style:solid;-fx-border-color:#fff;-fx-border-radius:5em;-fx-background-color:#3981bd;-fx-background-radius: 5em;-fx-text-fill: white;-fx-font-weight:bold; ";
     private static final String HOVERED_BUTTON_STYLE = "-fx-font-size:32;-fx-border-width:3;-fx-border-style:solid;-fx-border-color:#3981bd;-fx-border-radius:5em;-fx-background-color:#fff;-fx-background-radius: 5em;-fx-text-fill: #3981bd;-fx-font-weight:bold;";
@@ -31,7 +32,14 @@ public class Functionalities {
                 t.setPrefHeight(60);
                 t.setPrefWidth(60);
                 t.setAlignment((Pos.CENTER));
-                t.setStyle(s + "-fx-background-color:transparent;");
+                if(col==2 || col==5){
+                    t.setStyle("-fx-background-color:transparent;" +
+                            "-fx-border-color:#fff;" +
+                            "-fx-border-left-color:#3981bd;"+s);
+                }
+                else
+                t.setStyle("-fx-background-color:transparent;" +
+                        "-fx-border-color:#fff;"+s);
 
                 textFields[col][row] = t;
                 grid.add(t, col, row);
